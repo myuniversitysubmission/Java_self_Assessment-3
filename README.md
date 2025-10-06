@@ -238,3 +238,8 @@ getEnergyConsumption() — human workload energy.
 ## 📄 License
 This project is intended **only for educational purposes** as part of the university coursework.
 
+Video Link:
+https://drive.google.com/file/d/1CPUPvFc8bvBlmlVqzV8-BET5eSWuzxpY/view?usp=sharing
+
+Document Link:
+https://docs.google.com/document/d/1Oo16o0reyMS2SFbHRWkR4c6Bes5cG0Vp/edit?usp=sharing&ouid=100454102001847751804&rtpof=true&sd=true
