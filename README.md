@@ -60,8 +60,179 @@ Total Energy Consumption: 17.0 units
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 👥 Team
-// to be updated
 
+Adesh Moore
+
+🏭 1. WarehouseSimulation
+
+Type: Main (controller) class
+
+Purpose: Entry point of the whole program — it contains the main() method.
+
+Creates:
+
+Resources (like AGV, HumanResource)
+
+Operations (HumanOperation, TransportOperation)
+
+An IndustrialProcess (which groups operations)
+
+Relationship:
+
+Uses (dashed arrow) → IndustrialProcess
+
+You need to learn:
+
+How to write a main class that creates and connects objects.
+
+How to instantiate classes and call their methods.
+
+Dnyaneshwar 
+
+⚙️ 2. IndustrialProcess
+
+Type: Normal class
+
+Purpose: Represents a full warehouse process (e.g., receiving, packaging).
+
+Contains:
+
+A list of operations (IOperation) — meaning it’s made up of several smaller tasks.
+
+Key Methods:
+
+addOperation()
+
+getTotalDuration()
+
+getTotalEnergy()
+
+countAGVs()
+
+Relationship:
+
+Composition (solid diamond) → IOperation
+→ means IndustrialProcess owns the operations, and if it’s deleted, the operations go too.
+
+You need to learn:
+
+Composition: one object containing others.
+
+How to use ArrayList in Java to store multiple objects.
+
+🔧 3. IOperation (Interface / Abstract Class)
+
+Type: Abstract class or Interface
+
+Purpose: Blueprint for all operations.
+
+Attributes:
+
+id, description, nominalTime
+
+A list of Resources
+
+Methods:
+
+addResource()
+
+getDuration()
+
+getEnergyConsumption()
+
+Relationship:
+
+Parent class for HumanOperation and TransportOperation
+
+You need to learn:
+
+What an abstract class is (cannot be instantiated directly).
+
+How to use inheritance (extends).
+
+How polymorphism allows treating all operations the same (IOperation reference).
+
+Anil 
+
+🙋 4. HumanOperation
+
+Type: Subclass of IOperation
+
+Purpose: Represents operations done by humans (manual tasks).
+
+Implements:
+
+getDuration() and getEnergyConsumption() with human-based logic.
+
+You need to learn:
+
+How to override methods from a parent class.
+
+How to provide different behavior for different subclasses.
+
+🚚 5. TransportOperation
+
+Type: Subclass of IOperation
+
+Purpose: Automated transport tasks done by AGVs.
+
+Implements:
+
+Same methods as HumanOperation but with AGV-specific calculations.
+
+You need to learn:
+
+How to design multiple subclasses that behave differently but share the same parent.
+
+🔩 6. Resources (Abstract Class)
+
+Type: Abstract class
+
+Purpose: Base type for all resources used by operations.
+
+Attributes:
+
+id, name
+
+Method:
+
+getEnergyConsumption() (to be defined by subclasses)
+
+You need to learn:
+
+Abstract classes (again).
+
+The difference between inheritance and composition.
+
+Harshavarthan 
+
+🤖 7. AGV (Autonomous Guided Vehicle)
+
+Type: Subclass of Resources
+
+Purpose: Represents robot vehicles.
+
+Attributes:
+
+speed, battery, consumption
+
+Implements:
+
+getEnergyConsumption() — returns energy based on usage.
+
+👷 8. HumanResources
+
+Type: Subclass of Resources
+
+Purpose: Represents human workers.
+
+Attributes:
+
+hourlyRate or energy/time usage
+
+Implements:
+
+getEnergyConsumption() — human workload energy.
 ---
 
 ## 📄 License
